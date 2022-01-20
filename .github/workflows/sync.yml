@@ -1,0 +1,40 @@
+name: "Usptream Sync"
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+    # scheduled at 07:00 every Monday and Thursday
+
+  workflow_dispatch: # click the button on Github repo!
+
+jobs:
+  sync-upstreams:
+    name: sync-upstream
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      # need to checkout whole repo
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: git config --local user.email "action@github.com"
+        run: git config --local user.email "action@github.com"
+      - name: git config --local user.name "GitHub Action"
+        run: git config --local user.name "GitHub Action"
+      - name: git checkout main
+        run: git checkout main
+      - name: git remote add upstream https://github.com/ucdavis-ecs121wq22/hw1_template.git
+        run: git remote add upstream https://github.com/ucdavis-ecs121wq22/hw1_template.git
+      - name: fetch
+        run: git fetch upstream main
+      - name: git config pull.rebase false
+        run: git config pull.rebase false
+      - name: git pull upstream main --allow-unrelated-histories
+        run: git pull upstream main --allow-unrelated-histories
+      - name: git merge -X theirs upstream/main --allow-unrelated-histories
+        run: git merge -X theirs upstream/main --allow-unrelated-histories -m "Instructor Update"
+      - name: git commit -m "Add/Update from Instructor" || exit 0
+        run: git commit -m "Add/Update from Instructor" || exit 0
+      - name: git push force
+        run: git push --force
