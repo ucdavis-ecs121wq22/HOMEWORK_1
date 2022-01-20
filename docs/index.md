@@ -2,16 +2,17 @@
 
 ## ⚠️ We use auto-graders for most parts of the assignment. Please, follow the instructions precisely; you will lose credit for deviances. Stick to the variables’ names and case sensitivity.
 
+## ❗Do not try to modify the already created files under `tests/` directory. These are used to evaluate your submission; changes to these are considered cheating, and will cause your grade to be zero.
+
 
 ## **Objectives**
 
 - Becoming familiar with completing programming assignments/projects using GitHub.
 - Get started with git and GitHub
 - Learn how to write mark-down documentation and put instructions on how to reproduce work.
-- Learn how to create multiple versions of your project and create releases with tags.
 - Learn to create both CLI and API.
 
-## Part 1 (25 pts)
+## Part 1 (30 pts)
 
 ### 1.1 Connect to your GitHub using your ssh-key and test your connection.
 
@@ -23,9 +24,9 @@ It is recommended that create a new SSH key for GitHub. Never share your private
 
 After making sure your environment is ready and you can connect to GitHub via SSH, click on the following URL to accept the assignment invitation. **Link goes here ...**
 
-You will find a file named `student_info.json`in the project’s root directory. You will need to replace the placeholders with your exact information. This is part of the homework, don't skip this. 
 
-## Part 2 (25 pts)
+
+## Part 2 (30 pts)
 
 You will create a Python project that consists of two parts. The first part is a Python class that can be used as an API (a reusable library) in file `sorter_api.py`. The second part is a Python command-line interface (CLI) application, in file `sorter_cli.py` that uses that class to handle the user arguments and execute the sort function.
 
@@ -57,19 +58,12 @@ You will find a Python class called `Sorter` that has the primary purpose of sor
 - You will implement `sort_strings` that accept list of strings and sort them `lexicographically` in `asc` or `desc` order. YOu can implement `sort_strings` using any algorithm you like. 
 - As demonstrated in the example code, you will need to add the proper docstrings and documentation for the newly implemented function.
 
-### 2.2 Release your current version
-
-In your `main` branch, create a release of your stable, tested code.
-
-GitHub provides a simple interface for creating releases and tags. You can also create that tag on your terminal without using the GitHub interface. [External docs](https://www.toolsqa.com/git/github-releases/)
-
-Now that you have extended the `Sorter` class by the function `sort_strings`, it is ready to be used as an API (Python library). Create a new tag with version `v1.0` and let’s continue our development.
-
+**Creating a git branch named add/sort_strings will carry 10 points for this part, and the sort_strings operation will carry 10 points. Merging the sort_strings branch into main with a pull request carries 10 points.** 
  
 
 ---
 
-## Part 3 Python CLI (35 pts)
+## Part 3 Python CLI (30 pts)
 
 > Refer to the GitHub instructions from Part 2 to create a different branch called `add/cli` from your `main` branch once you have merged the previous code.
 
@@ -112,22 +106,18 @@ Sorted file:
 4
 ```
 
-**Please remember to create a PR from the `add/cli` branch to `main` branch once you are done with your changes. Then you can merge that pull request**
+**Creating a git branch named add/sort_strings will carry 10 points for this part, and the sort_strings operation will carry 10 points. Merging the sort_strings branch into main with a pull request carries 10 points.** 
 
 <hr>
 
-## Part 4 Wrapping up and final release (15 pts)
+## Part 4 Pull Request Merge Order (10 pts)
 
-It is a good practice to make sure you are documenting everything for future reference or for user guidance. On GitHub, the common language to write docs is called markdown. Please refer to [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) or look up for it.
+Throughout this assignment, you will learn about how to create and merge pull requests. Upon finishing this assignment, you will have accomplished two tasks (in that order):
 
-In this part, you are required to write full documentation your developed program. You will write the following:
-
-- Create a file called `docs.md` in the root directory.
-- API example (How to call the library/API).
-- CLI Example (How to call the command from the terminal)
-- What are the different types of sorting?
-
-After writing the documentation, you can now wrap up the whole project and release it in a second release tag named `v2.0`. *(Follow the releasing instructions from section 2.2)*
+ - Create and merge a pull request to merge your code from `add/sort_strings` branch to the `main` branch.
+ - Create and merge a pull request to merge your code from `add/cli` branch to `main` branch.
+ 
+**If your pull request merges occur in that order, you get the credit for this part.**
 
 ### Notes
 
@@ -138,13 +128,18 @@ After writing the documentation, you can now wrap up the whole project and relea
 ### How we will grade
 
 Our desired eductional outcome for this homework is to check that a) You can make the required python changes
-(40% of the credit) for each part and b) you Have the proper git history for each part (60% of the credit). 
+(50% of the credit) for each part and b) you Have the proper git history for each part (50% of the credit). Of course,
+you also get some points, for getting on Github and setting up your keys etc, and simply just accepting & submitting
+the assignment. 
 
 - We will run test cases to check that your code does the API and CLI functions correctly
-- We will check the history of your submitted version control repo. We're looking for teh following: 
+- We will check the history of your submitted version control repo. We're looking for the following: 
 
-1. The string sort program passed the required test cases and the CLI works - 10 points.
-2. There are 3 branches in your repo, named: "main", "add/cli", and "add/sort_strings" - 10 points
-3. There is a merged pull request on the "add/sort_strings" branch - 10 points
-4. There is a merged pull request on the "add/cli" branch - 10 points
-5. The "add/sort_strings" merge occurs before the "add/cli" merge - 10 points
+1. You have accepted the course invitation and there is a `main` branch in your repository (Part 1) - 30 points.
+2. The string sort program passed the required test cases (Part 2) - 10 points.
+3. The `add/sort_strings` branch exists (Part 2) - 10 points.
+4. You have created and merged the `add/sort_strings` branch into the `main` branch via a pull request (Part 2) - 10 points.
+5. The CLI operation program passed the required test cases (Part 3) - 10 points
+6. The `add/cli` branch exists (Part 3) - 10 points
+7. You have created and merged the `add/cli` branch into the `main` branch via a pull request (Part 3) - 10 points.
+8. The `add/sort_strings` merge occurs before the `add/cli` merge (Part 4) - 10 points
