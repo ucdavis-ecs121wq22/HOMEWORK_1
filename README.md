@@ -6,9 +6,6 @@
 
 ## ⚠️ We use auto-graders for most parts of the assignment. Please, follow the instructions precisely; you will lose credit for deviances. Stick to the variables’ names and case sensitivity.
 
-## ❗Do not try to modify the already created files under `tests/` directory. These are used to evaluate your submission; changes to these are considered cheating, and will cause your grade to be zero.
-
-
 ## **Objectives**
 
 - Becoming familiar with completing programming assignments/projects using GitHub.
