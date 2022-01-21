@@ -24,8 +24,8 @@ jobs:
         run: git config --local user.name "GitHub Action"
       - name: git checkout main
         run: git checkout main
-      - name: git remote add upstream https://github.com/ucdavis-ecs121wq22/hw1_template.git
-        run: git remote add upstream https://github.com/ucdavis-ecs121wq22/hw1_template.git
+      - name: git remote add upstream https://github.com/ucdavis-ecs121wq22/HOMEWORK_1.git
+        run: git remote add upstream https://github.com/ucdavis-ecs121wq22/HOMEWORK_1.git
       - name: fetch
         run: git fetch upstream main
       - name: git config pull.rebase false
