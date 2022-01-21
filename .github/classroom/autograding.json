@@ -1,0 +1,84 @@
+{
+    "tests": [
+      {
+        "name": "main_does_cli_branch_exist",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k main_does_cli_branch_exist",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 30
+      },
+      {
+        "name": "sorter_strings",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k sorter_strings",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "does_sort_strings_branch_exist",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k does_sort_strings_branch_exist",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "pr_sort_strings_main",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k pr_sort_strings_main",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "verify_cli_sorter",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k verify_cli_sorter",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "branch_does_cli_branch_exist",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k branch_does_cli_branch_exist",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "pr_cli_main",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k pr_cli_main",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      },
+      {
+        "name": "test_merge_order",
+        "setup": "sudo -H pip3 install pytest",
+        "run": "pytest -k test_merge_order",
+        "input": "",
+        "output": "",
+        "comparison": "included",
+        "timeout": 10,
+        "points": 10
+      }
+    ]
+  }
