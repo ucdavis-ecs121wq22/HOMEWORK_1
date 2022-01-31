@@ -55,4 +55,10 @@ class Sorter:
 
     def sort_strings(self, iterable):
         # Write your code here
+        all_types = map(lambda item: isinstance(item, str), iterable)
+        if False in all_types:
+            raise TypeError("The iterable list contains non-numbers")
+
+        is_desc = True if self.sort_order == "desc" else False
+        return sorted(list(iterable), reverse=is_desc)
         pass
